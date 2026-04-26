@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"ee7dad3be28b8cad","type":"group","x":-920,"y":-640,"width":1880,"height":480,"label":"2 etapas: Análisis Exploratorio  y Automatización"},
+		{"id":"56c6d16fdf26289b","type":"group","x":-812,"y":320,"width":1092,"height":120,"label":"A/B Testing"},
+		{"id":"1a09aafbdf045276","type":"text","text":"# clustering","x":492,"y":-370,"width":308,"height":110,"color":"6"},
+		{"id":"699c11feef27528a","type":"text","text":"# ⚙︎  feature engineering","x":-684,"y":-370,"width":352,"height":160,"color":"6"},
+		{"id":"7777dac32b094be3","type":"text","text":"# ≡ conversaciones","x":428,"y":-560,"width":480,"height":60,"color":"2"},
+		{"id":"1ec421e23bf83843","type":"text","text":"# ≡ transacciones","x":-46,"y":-560,"width":434,"height":60,"color":"2"},
+		{"id":"33d1c00d6fc35e48","type":"text","text":"# ≡ productos","x":-453,"y":-560,"width":367,"height":60,"color":"2"},
+		{"id":"72825d5efbc8ce9a","type":"text","text":"# ≡ usuarios","x":-875,"y":-560,"width":382,"height":60,"color":"2"},
+		{"id":"0d0c5db26cb6f2a3","type":"text","text":"# ⚙︎  feature engineering","x":-292,"y":-370,"width":352,"height":160,"color":"6"},
+		{"id":"5d0cf98d6c80a7ab","type":"text","text":"# ⚙︎  feature engineering","x":100,"y":-370,"width":352,"height":160,"color":"6"},
+		{"id":"8e0351d33a5353d5","type":"text","text":"# `estado_cliente`","x":-52,"y":6,"width":480,"height":60,"color":"4"},
+		{"id":"7a12fcc7423d39ee","type":"text","text":"# 💬 Output user request","x":-200,"y":340,"width":460,"height":80},
+		{"id":"b1fa7d5f16cf30ab","type":"text","text":"# 💬 Output user request","x":-792,"y":340,"width":460,"height":80},
+		{"id":"60a45f7622a71136","type":"text","text":"# [[HAVI]]  current model","x":-655,"y":6,"width":405,"height":60,"color":"4"}
+	],
+	"edges":[
+		{"id":"0faa0f9b90feddf9","fromNode":"72825d5efbc8ce9a","fromSide":"bottom","toNode":"699c11feef27528a","toSide":"top"},
+		{"id":"cc1a071bdb0701ec","fromNode":"7777dac32b094be3","fromSide":"bottom","toNode":"1a09aafbdf045276","toSide":"top"},
+		{"id":"07f1466a71f93794","fromNode":"699c11feef27528a","fromSide":"bottom","toNode":"8e0351d33a5353d5","toSide":"top"},
+		{"id":"1ea83f2b55e224f0","fromNode":"1a09aafbdf045276","fromSide":"bottom","toNode":"8e0351d33a5353d5","toSide":"top"},
+		{"id":"77c77529805058d0","fromNode":"8e0351d33a5353d5","fromSide":"bottom","toNode":"7a12fcc7423d39ee","toSide":"top"},
+		{"id":"fd60ef24b617c532","fromNode":"60a45f7622a71136","fromSide":"bottom","toNode":"7a12fcc7423d39ee","toSide":"top"},
+		{"id":"5cd315760d7d2258","fromNode":"60a45f7622a71136","fromSide":"bottom","toNode":"b1fa7d5f16cf30ab","toSide":"top"},
+		{"id":"cbbe7f739c9c7db0","fromNode":"33d1c00d6fc35e48","fromSide":"bottom","toNode":"0d0c5db26cb6f2a3","toSide":"top"},
+		{"id":"43faceaff7af2e96","fromNode":"1ec421e23bf83843","fromSide":"bottom","toNode":"5d0cf98d6c80a7ab","toSide":"top"}
+	]
+}

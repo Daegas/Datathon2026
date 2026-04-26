@@ -6,36 +6,92 @@
       {
         "id": "9e58c446dff9be37",
         "type": "tabs",
+        "dimension": 50.77380952380952,
         "children": [
           {
             "id": "b9d6617c7e81058b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "chats/productos.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "productos"
+            }
+          },
+          {
+            "id": "da606dc5e4b67ba4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HAVI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HAVI"
             }
           },
           {
             "id": "b02060c298510376",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Usuarios.md",
+                "file": "Memoria Estructurada.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Memoria Estructurada"
+            }
+          },
+          {
+            "id": "961880f06a176ac9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Estimación de Costos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Usuarios"
+              "title": "Estimación de Costos"
+            }
+          },
+          {
+            "id": "f2f3e3ea824baf98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resultados.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Resultados"
+            }
+          },
+          {
+            "id": "04298c93ad29db0d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Usuario.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Usuario"
             }
           },
           {
@@ -44,12 +100,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modelo para Satisfacción.md",
+                "file": "Conversaciones.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Modelo para Satisfacción"
+              "title": "Conversaciones"
             }
           },
           {
@@ -72,15 +128,23 @@
       {
         "id": "0208ce368f6da543",
         "type": "tabs",
+        "dimension": 49.22619047619048,
         "children": [
           {
-            "id": "05bf605f8dcecef5",
+            "id": "b0d6cfbfe9ed6777",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "canvas",
+              "state": {
+                "file": "Flow Diagram.canvas",
+                "viewState": {
+                  "x": 20,
+                  "y": -100,
+                  "zoom": -1.3222769511436598
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Flow Diagram"
             }
           }
         ]
@@ -140,7 +204,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 266.5,
+    "collapsed": true
   },
   "right": {
     "id": "4c273c32b5b645de",
@@ -156,7 +221,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Modelo para Satisfacción.md",
+                "file": "Memoria Estructurada.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +231,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Modelo para Satisfacción"
+              "title": "Backlinks for Memoria Estructurada"
             }
           },
           {
@@ -175,12 +240,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Modelo para Satisfacción.md",
+                "file": "Memoria Estructurada.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Modelo para Satisfacción"
+              "title": "Outgoing links from Memoria Estructurada"
             }
           },
           {
@@ -218,13 +283,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Modelo para Satisfacción.md",
+                "file": "Memoria Estructurada.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Modelo para Satisfacción"
+              "title": "Outline of Memoria Estructurada"
             }
           }
         ]
@@ -245,12 +310,32 @@
       "bases:Create new base": false
     }
   },
-  "active": "a54f2353622911b2",
+  "active": "b02060c298510376",
   "lastOpenFiles": [
-    "Usuarios.md",
-    "Modelo para Satisfacción.md",
-    "Productos.md",
+    "Flow Diagram.canvas",
+    "chats/productos.md",
+    "Memoria Estructurada.md",
+    "chats/Uso de IA.md",
+    "chats/conversaciones.md",
     "Transacciones.md",
-    "Untitled.canvas"
+    "imagenes/Pasted image 20260426092803.png",
+    "HAVI.md",
+    "imagenes/Pasted image 20260426091116.png",
+    "Productos.md",
+    "Conversaciones.md",
+    "Estimación de Costos.md",
+    "Producto.md",
+    "Resultados.md",
+    "Equipo 18 - Guaxans.md",
+    "Usuario.md",
+    "imagenes/Pasted image 20260426043807.png",
+    "imagenes",
+    "chats",
+    "imagenes/Pasted image 20260426035548.png",
+    "imagenes/Pasted image 20260426033843.png",
+    "imagenes/Pasted image 20260426033827.png",
+    "imagenes/Pasted image 20260426033746.png",
+    "imagenes/Pasted image 20260426033726.png",
+    "imagenes/Pasted image 20260426004814.png"
   ]
 }
