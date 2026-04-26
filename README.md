@@ -30,10 +30,33 @@ Proyecto del Datathon Tec Monterrey.
 
 - `Obs-Datathon26/`
 	- `chats/` vienen algunos chats con LLMs usados para la ejecución del proyecto
-	- Presentación, hallazgos
+	- el resto de los archivos es la presentación con hallazgos, imágenes, etc
 
 - `datathon26/`
 	- Entorno virtual local con dependencias de Python.
 	- Incluye binarios y paquetes instalados para ejecutar el proyecto.
+
+## Librerias utilizadas
+
+Dependencias detectadas por uso de `import` en `bot/` y `notebooks/`:
+
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `shiny`
+- `python-dotenv`
+- `matplotlib`
+- `seaborn`
+- `nltk`
+- `sentence-transformers`
+- `wordcloud`
+- `xgboost`
+
+Tambien se usan modulos de la libreria estandar de Python como `os`, `re`, `math` y `pathlib`.
+
+### Modulos locales
+
+- `predictor` (usado por `bot/app.py`)
+- `manual_stopwords` (usado en notebooks)
 
 

@@ -1,6 +1,5 @@
-O más bien pseudo-havi
 
-![[Pasted image 20260426091116.png]]
+![[Pasted image 20260426100641.png]]
 
 
 [[Memoria Estructurada]]

@@ -17,6 +17,9 @@ except Exception:  # pragma: no cover
     XGBRegressor = None
 
 
+BOT_GREETING = "Hola soy pseudo-havi tu asistente de personalizacion. Analizando tu perfil y conversaciones..."
+
+
 def _resolve_base_path() -> Path:
     env_path = os.getenv("PPATH")
     if env_path:
@@ -60,6 +63,19 @@ def _read_clusters(path: Path, stem: str, col_name: str) -> pd.DataFrame:
         .agg(lambda s: int(s.mode().iloc[0]) if not s.mode().empty else int(s.iloc[0]))
     )
     return clusters
+
+
+def _normalizar_user_id(msg: str) -> str | None:
+    texto = msg.upper().strip()
+    match = re.search(r"USR-\d{5}", texto)
+    if match:
+        return match.group(0)
+
+    digits = re.sub(r"\D", "", texto)
+    if not digits:
+        return None
+
+    return f"USR-{digits.zfill(5)[:5]}"
 
 
 class PersonalizationBot:
@@ -395,11 +411,6 @@ class PersonalizationBot:
         sugerencias = self._recomendaciones_producto(user_id, row, sat_pred)
 
         respuesta = [
-            f"[Bot interno - usuario: {user_id}]",
-            f"Satisfaccion estimada: {sat_pred:.1f}/10",
-            f"Perfil de conversacion: {perfil_conv}",
-            f"Estilo de respuesta sugerido: {estilo_resp}",
-            "",
             "Sugerencias para mejorar satisfaccion:",
         ]
         respuesta.extend([f"  {i}. {s}" for i, s in enumerate(sugerencias, start=1)])
@@ -418,6 +429,10 @@ class PersonalizationBot:
         return "\n".join(respuesta)
 
 
+def mensaje_inicial() -> str:
+    return BOT_GREETING
+
+
 _BOT = PersonalizationBot()
 
 
@@ -426,7 +441,7 @@ def bot_personalizado(user_id: str) -> str:
 
 
 def responder_mensaje(msg: str) -> str:
-    maybe_id = re.search(r"USR-\d{5}", msg.upper())
-    if not maybe_id:
-        return "Envia un user_id (ejemplo: USR-00003) para generar la prediccion personalizada."
-    return bot_personalizado(maybe_id.group(0))
+    user_id = _normalizar_user_id(msg)
+    if not user_id:
+        return "Envia solo los 5 digitos de tu user_id (ejemplo: 00003) para generar la prediccion personalizada."
+    return bot_personalizado(user_id)

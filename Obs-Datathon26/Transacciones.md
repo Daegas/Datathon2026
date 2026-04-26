@@ -7,8 +7,10 @@ Resumir estado con 6 variables, 1 record por usuario por periodo:
 * Casos atípicos
 * Mes
 
+
 ![[Pasted image 20260426092803.png]]
 
+![[Pasted image 20260426100817.png]]
 ---
 # Expected Output
 Dismunu

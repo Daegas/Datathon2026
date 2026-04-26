@@ -1,15 +1,41 @@
 from pathlib import Path
 
 from shiny import App, ui, render, reactive
-from predictor import responder_mensaje
+from predictor import mensaje_inicial, responder_mensaje
 
 app_ui = ui.page_fluid(
     ui.include_css(Path(__file__).with_name("styles.css")),
+        ui.tags.script(
+                """
+                document.addEventListener('DOMContentLoaded', function () {
+                    const input = document.getElementById('user_msg');
+                    const sendButton = document.getElementById('send');
+
+                    if (!input) return;
+
+                    input.setAttribute('inputmode', 'numeric');
+                    input.setAttribute('maxlength', '5');
+
+                    input.addEventListener('input', function (event) {
+                        event.target.value = event.target.value.replace(/\D/g, '').slice(0, 5);
+                    });
+
+                    input.addEventListener('keydown', function (event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            if (sendButton) {
+                                sendButton.click();
+                            }
+                        }
+                    });
+                });
+                """
+        ),
     ui.div(
-        ui.h2("Chatbot"),
+        ui.h2("Pseudo Havi"),
         ui.output_ui("chat"),
         ui.layout_columns(
-            ui.input_text("user_msg", "Mensaje", placeholder="Escribe un user_id (ej. USR-00003)"),
+                        ui.input_text("user_msg", "Mensaje", placeholder="Escribe solo los 5 digitos de tu user_id"),
             ui.input_action_button("send", "Enviar", class_="btn-primary"),
             col_widths=(10, 2),
         ),
@@ -29,9 +55,11 @@ def server(input, output, session):
             return
 
         chat = list(messages.get())
+        bot_intro = mensaje_inicial()
         bot_reply = responder_mensaje(msg)
-        
+
         chat.append(("Usuario", msg))
+        chat.append(("Bot", bot_intro))
         chat.append(("Bot", bot_reply))
         messages.set(chat)
         ui.update_text("user_msg", value="")
