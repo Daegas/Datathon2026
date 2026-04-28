@@ -60,20 +60,6 @@ El costo dominante. Incluye revisión de ejecuciones, debugging y actualizacione
 - *Caso Low-end:* $50 * 1h = **$50 USD**
 
 ---
-
-### 5. Resumen de costos (Corregido)
-
-| Rubro              | Descripción                     | Costo mensual estimado |
-| :----------------- | :------------------------------ | :--------------------- |
-| **Cómputo**        | EC2 t3.small (30 min mensuales) | $0.01 USD              |
-| **Almacenamiento** | S3 Standard (1 GB)              | $0.02 - $0.10 USD      |
-| **Monitoreo**      | CloudWatch (Free Tier)          | $0.00 USD              |
-| **Mantenimiento**  | Ingeniería (1-2 horas)          | $50 - $100 USD         |
-
-**Costo total estimado:**
-Para 100,000 clientes $50.3 – $110.1 USD por mes
-
----
 # Fuentes
 
 1. **EC2 t3.small pricing** - [https://instances.vantage.sh/aws/ec2/t3](https://instances.vantage.sh/aws/ec2/t3) (Precio exacto: $0.0208/hora)

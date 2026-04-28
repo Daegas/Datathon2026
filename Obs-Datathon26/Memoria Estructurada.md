@@ -1,16 +1,8 @@
-Hey Banco es servicio digital para manejar los recursos económicos de un usuario
-
-Promedio de **7.5** de satisfacción. 
-Un 7.5 es aprobatorio, pero se puede mejorar.
-
-
-![[Pasted image 20260426004814.png]]
----
----
-
 # En Búsqueda de la Satisfacción
 
-*¿Qué es aquello que hey banco puede ajustar, ofrecer para aumentar de manera personalizada la satisfacción de un **cliente**?*
+Promedio actual: 7.5
+
+*¿Cómo aumentar de manera personalizada la satisfacción de un **cliente**?*
 
 Antes que eso, 
 ### **¿ Qué define a un [[Usuario]]?**
@@ -18,18 +10,19 @@ Antes que eso,
 ---
 #  Propuesta y Happy Path 
 
-Registro reducido histórico con actualización mensual ([[#Mejoras]]) del cliente. 
-En otras palabras un matcheo periódico de estado del cliente con satisfacción.
+Registro reducido histórico con actualización periódica del estado del cliente. 
 
 ---
 # Objective Workflow
 [[Flow Diagram.canvas]]
 
 ---
-# ¿Y cómo nos ayuda *yet another* table?
-$$\text{estadocliente}(t)= f(\text{satisfaccion}, \text{comportamiento}, \text{productos}, \text{transacciones})$$
+# ¿Para qué?
 
-Esto permite:
+Permite resumir datos dispersos en varios sistemas en una señal simple que muestra cómo está el cliente en cada momento a lo largo del tiempo
+## Decisiones personalizadas
+
+Advantages:
 * Ver evolución de la relación con el cliente
 * Detectar riesgo u oportunidades
 *  Product Insight
@@ -44,31 +37,46 @@ Esta base de datos serviría como contexto de un usuario al modelo que actualmen
 # [[Resultados]]
 [[Flow Diagram.canvas]]
 
-## Feature Engineering
+## Estado de clientes
 [[Productos]]
 [[Transacciones]]
 [[Conversaciones]]
 
+## Resultado
+[[HAVI]]
+
 ---
 # Escalabilidad
-## Etapa de Desarrollo
-Investigación de lógica del estado del cliente
-## Etapa de Implementación
-Todo el código está hecho en python, tratando de usar convenciones pero al final se puede implementar un pipeline que corra automáticamente cada mes que vaya populando la DB en backend y sea usado en el modelo final.
+
+* Un único procesamiento hacia atras
+* Después el cálculo del estado del cliente se puede automatizar mediante un pipeline que procese periódicamente los datos de las distintas bases y agregue un nuevo registro por cliente y periodo. 
+* Con el paso del tiempo se necesita más almacenamiento que se puede manejar con un servicio en la nube como S3
 
 ---
 # [[Estimación de Costos]]
 
+
+| Rubro              | Descripción                     | Costo mensual estimado |
+| :----------------- | :------------------------------ | :--------------------- |
+| **Cómputo**        | EC2 t3.small (30 min mensuales) | $0.01 USD              |
+| **Almacenamiento** | S3 Standard (1 GB)              | $0.02 - $0.10 USD      |
+| **Monitoreo**      | CloudWatch (Free Tier)          | $0.00 USD              |
+| **Mantenimiento**  | Ingeniería (1-2 horas)          | $50 - $100 USD         |
+
+**Costo total estimado:**
+Para 100,000 clientes $50.3 – $110.1 USD por mes
+
 ---
 # Mejoras
 
+* Optimización del modelo que define el **estado del cliente**
+* A/B Testing  con benchmarking con un el modelo de Havi.
 * **Periodicidad:** Podría ser otro punto de ajuste  a gusto de la compañia y límitado por el poder de cómputo, se puede hacer en paralelo dependiendo de la necesidad
 * **Estatus de [[Productos]]:** Definir más niveles 
 	* tiene 
 	* no tiene 
 	* podría querer (agregar)
 	* quiere (agregar)
-* Mejorar el modelo del pseudo-havi no está directamente en el goal, pero si hacer una comparación de contexto vs. no contexto. (A/B testing)
 
 ----
 

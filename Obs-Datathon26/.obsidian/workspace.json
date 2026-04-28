@@ -92,17 +92,28 @@
             "id": "b0d6cfbfe9ed6777",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Flow Diagram.canvas",
-                "viewState": {
-                  "x": 87.01396545073231,
-                  "y": -99.00344735558363,
-                  "zoom": -1.3425298658703941
-                }
+                "file": "chats/Uso de IA.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Flow Diagram"
+              "icon": "lucide-file",
+              "title": "Uso de IA"
+            }
+          },
+          {
+            "id": "bcaeedaafe03a8ef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Speech.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Speech"
             }
           }
         ]
@@ -162,8 +173,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5,
-    "collapsed": true
+    "width": 266.5
   },
   "right": {
     "id": "4c273c32b5b645de",
@@ -179,7 +189,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Flow Diagram.canvas",
+                "file": "chats/Uso de IA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +199,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Flow Diagram"
+              "title": "Backlinks for Uso de IA"
             }
           },
           {
@@ -198,12 +208,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Flow Diagram.canvas",
+                "file": "chats/Uso de IA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Flow Diagram"
+              "title": "Outgoing links from Uso de IA"
             }
           },
           {
@@ -241,13 +251,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Flow Diagram.canvas",
+                "file": "chats/Uso de IA.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Flow Diagram"
+              "title": "Outline of Uso de IA"
             }
           }
         ]
@@ -270,24 +280,25 @@
   },
   "active": "b0d6cfbfe9ed6777",
   "lastOpenFiles": [
-    "Memoria Estructurada.md",
-    "Usuario.md",
-    "Conversaciones.md",
-    "Transacciones.md",
-    "Pasted image 20260426100817.png",
-    "Flow Diagram.canvas",
-    "HAVI.md",
-    "imagenes/Pasted image 20260426100641.png",
-    "Productos.md",
-    "Untitled.md",
-    "chats/productos.md",
-    "chats/Uso de IA.md",
     "chats/conversaciones.md",
+    "Memoria Estructurada.md",
+    "Flow Diagram.canvas",
+    "Productos.md",
+    "Transacciones.md",
+    "Conversaciones.md",
+    "HAVI.md",
+    "Speech.md",
+    "Estimación de Costos.md",
+    "chats/Uso de IA.md",
+    "chats/productos.md",
+    "Usuario.md",
+    "Pasted image 20260426103411.png",
+    "Resultados.md",
+    "Pasted image 20260426100817.png",
+    "imagenes/Pasted image 20260426100641.png",
     "imagenes/Pasted image 20260426092803.png",
     "imagenes/Pasted image 20260426091116.png",
-    "Estimación de Costos.md",
     "Producto.md",
-    "Resultados.md",
     "Equipo 18 - Guaxans.md",
     "imagenes/Pasted image 20260426043807.png",
     "imagenes",
@@ -295,7 +306,6 @@
     "imagenes/Pasted image 20260426035548.png",
     "imagenes/Pasted image 20260426033843.png",
     "imagenes/Pasted image 20260426033827.png",
-    "imagenes/Pasted image 20260426033746.png",
-    "imagenes/Pasted image 20260426033726.png"
+    "imagenes/Pasted image 20260426033746.png"
   ]
 }
